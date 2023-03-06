@@ -8,3 +8,6 @@ Welcome to the sequel tutorial to Git Basics! This is a companion to the PowerPo
 ### Creating branches
 Create a new branch using `git checkout`—for this example, we'll call our new branch “first”: `git checkout -b first`<br>
 Now, you can make all the changes you want on this branch without affecting the master branch until your changes are ready! How cool is that? You can use `git branch` to list all the branches you have, at which point you should now see `first` added to that list, with an asterisk next to it, indicating that `first` is your currently-selected branch.<br>To push this branch onto GitHub, use `git push --set-upstream origin first`.
+
+### Switching branches
+For a future step, create another branch `git checkout -b second`. Since we still need to be on the `first` branch, use `git switch first` to switch back to it.
