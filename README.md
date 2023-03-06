@@ -1,0 +1,3 @@
+# Git Advanced
+## Welcome
+Welcome to the sequel tutorial to Git Basics! This is a companion to the PowerPoint presentation which will go over actually _performing_ all of the Git operations gone over in that presentation. Everything from branching to stashing—we'll go over that here. Have the GitHub page for your forked repository open, because you'll be making a lot of changes both locally and remotely!
