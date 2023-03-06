@@ -11,3 +11,6 @@ Now, you can make all the changes you want on this branch without affecting the 
 
 ### Switching branches
 For a future step, create another branch `git checkout -b second`. Since we still need to be on the `first` branch, use `git switch first` to switch back to it.
+
+### Committing and merging
+Make a change on the `first` branch—write some arbitrary text into the file _scratch.txt_. 
