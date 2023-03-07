@@ -13,4 +13,4 @@ Now, you can make all the changes you want on this branch without affecting the 
 For a future step, create another branch `git checkout -b second`. Since we still need to be on the `first` branch, use `git switch first` to switch back to it.
 
 ### Committing and merging
-Make a change on the `first` branch—write some arbitrary text into the file _scratch.txt_. 
+Make a change on the `first` branch—write some arbitrary text into the file _scratch.txt_. Commit that change, and `git switch master` to get back onto the master branch. Notice that _scratch.txt_ has updated in your working tree and no longer contains the text that you wrote, as you wrote it on the `first` branch.<br>Use `git merge first` to merge the changes back into master, and you've successfully merged a branch!
