@@ -20,3 +20,9 @@ Now that you've merged the `first` branch into `master`, you can delete it to ke
 
 ### Rebasing
 But now the branch called `second` that you created earlier is behind the master branch—it's missing some new changes that might be needed to work on it. Switch to that branch with `git switch second` and use `git rebase master` to pull new changes onto that branch. Notice that _scratch.txt_ has been updated, as well as the `git log`.
+
+---
+
+## Undoing mistakes
+### Reverting commits
+Say we want to get _scratch.txt_ back to the way it was before you merged the branch `first` into `master`—maybe the changes weren't quite ready yet and now the master branch has some issues. You can revert the merge commit by using `git revert HEAD`, and should now see the file in your working tree updated to be blank again.
