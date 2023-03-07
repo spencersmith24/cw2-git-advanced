@@ -14,3 +14,6 @@ For a future step, create another branch `git checkout -b second`. Since we stil
 
 ### Committing and merging
 Make a change on the `first` branch—write some arbitrary text into the file _scratch.txt_. Commit that change, and `git switch master` to get back onto the master branch. Notice that _scratch.txt_ has updated in your working tree and no longer contains the text that you wrote, as you wrote it on the `first` branch.<br>Use `git merge first` to merge the changes back into master, and you've successfully merged a branch!
+
+### Deleting branches
+Now that you've merged the `first` branch into `master`, you can delete it to keep your branches clean by using `git branch -d first`.
