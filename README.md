@@ -26,3 +26,6 @@ But now the branch called `second` that you created earlier is behind the master
 ## Undoing mistakes
 ### Reverting commits
 Say we want to get _scratch.txt_ back to the way it was before you merged the branch `first` into `master`—maybe the changes weren't quite ready yet and now the master branch has some issues. You can revert the merge commit by using `git revert HEAD`, and should now see the file in your working tree updated to be blank again.
+
+### Resetting the commit history
+Make a 3 different commits to the file _scratch.txt_ so that its contents are updated and the `git log` is now three longer. Push those commits with `git push`. Assume we only want to keep the first of those changes—use `git reset HEAD~2` to delete the last two commits. Ensure that the `git log` now only contains the first commit that you made, and the state of the file in your working tree reflects this. Then, use `git push origin --force` to update the commit history on remote. The last two commits have been reset without an extra commit needed to reset them, and without the possibility of a revert conflict!
