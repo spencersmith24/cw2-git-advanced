@@ -17,3 +17,6 @@ Make a change on the `first` branch—write some arbitrary text into the file _s
 
 ### Deleting branches
 Now that you've merged the `first` branch into `master`, you can delete it to keep your branches clean by using `git branch -d first`.
+
+### Rebasing
+But now the branch called `second` that you created earlier is behind the master branch—it's missing some new changes that might be needed to work on it. Switch to that branch with `git switch second` and use `git rebase master` to pull new changes onto that branch. Notice that _scratch.txt_ has been updated, as well as the `git log`.
