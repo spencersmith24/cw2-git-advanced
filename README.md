@@ -29,3 +29,14 @@ Say we want to get _scratch.txt_ back to the way it was before you merged the br
 
 ### Resetting the commit history
 Make a 3 different commits to the file _scratch.txt_ so that its contents are updated and the `git log` is now three longer. Push those commits with `git push`. Assume we only want to keep the first of those changes—use `git reset HEAD~2` to delete the last two commits. Ensure that the `git log` now only contains the first commit that you made, and the state of the file in your working tree reflects this. Then, use `git push origin --force` to update the commit history on remote. The last two commits have been reset without an extra commit needed to reset them, and without the possibility of a revert conflict!
+
+### Getting rid of local changes
+Make some changes without committing them. Say we don't want to keep these changes—either they don't work, or someone has just pushed to remote and we just want to take that change. Use `git restore scratch.txt` or `git reset --hard` to delete those changes.<br>
+**What about if I've already committed**?<br>
+Refer to the previous step on resetting commit history to use `git reset <number-of-commits>` to remove local commits, then `git reset --hard` to set all your files back to those commits, and then you can pull to update your working tree back to normal.
+
+---
+
+## Stashing
+### Saving changes to be used later
+Update _scratch.txt_ with any new content. To save these changes for later without committing them, stash all uncommitted changes and give the stash a good description by using `git stash save <description>`. Use `git stash list` to make sure the stash was saved, and verify that _scratch.txt_ has been restored in your working tree.
