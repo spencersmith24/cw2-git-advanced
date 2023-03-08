@@ -38,11 +38,15 @@ Refer to the previous step on resetting commit history to use `git reset <number
 ---
 
 ## Stashing
+> Note: anytime `[stash]` is written in brackets, it means that that argument is optional, and if not included, will default to the most recent stash. If you only have one stash, that's what it'll default to.
 ### Saving changes to be used later
 Update _scratch.txt_ with any new content. To save these changes for later without committing them, stash all uncommitted changes and give the stash a good description by using `git stash save <description>`. Use `git stash list` to make sure the stash was saved, and verify that _scratch.txt_ has been restored in your working tree.
 
 ### Viewing the changes made in stashes
-Use `git stash show` to show your most recently-stashed changes. This isn't super helpful, except telling you how many lines were added to what files—to see a more in-depth diff, use `git stash show -p`. You should see whatever changes you made in the stash that you made.
+Use `git stash show [stash]` to show your most recently-stashed changes. This isn't super helpful, except telling you how many lines were added to what files—to see a more in-depth diff, use `git stash show -p [stash]`. You should see whatever changes you made in the stash that you made.
 
 ### Bringing stashes back
-Use `git switch second` to switch to the branch you created earlier. To apply the changes from the stash you made onto this branch, so they don't affect the master branch, use `git stash pop`. Use `git stash list` to notice that the stash has been deleted as a result, and `git status` to verify that changes have been made to your working tree.
+Use `git switch second` to switch to the branch you created earlier. To apply the changes from the stash you made onto this branch, so they don't affect the master branch, use `git stash apply [stash]`. Use `git stash list` to notice that the stash is still in your stash list due to the use of `apply` as opposed to `pop`, and `git status` to verify that changes have been made to your working tree.
+
+### Deleting stashes
+Say we no longer need a stash—use `git stash drop [stash]` to delete it, and `git stash list` to verify that it's no longer there. The last two steps could have been done in one command with `git stash pop [stash]`, applying and then deleting.
