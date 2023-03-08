@@ -53,3 +53,6 @@ Say we no longer need a stash—use `git stash drop [stash]` to delete it, and `
 
 > **Cleanup**<br>
 > Use `git switch master` and `git merge second` to merge that branch back into the master branch, then `git branch -d second` to remove it.
+
+### Creating a new branch from stashed changes
+Make some changes and stash them. To make a new branch from these changes, use `git stash branch <branch-name> [stash]`. Call our new branch `third`—`git stash branch third` in preparation for the miscellaneous Git commands. You will automatically be switched to this branch with your changes un-committed but on your working tree.
