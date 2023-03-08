@@ -50,3 +50,6 @@ Use `git switch second` to switch to the branch you created earlier. To apply th
 
 ### Deleting stashes
 Say we no longer need a stash—use `git stash drop [stash]` to delete it, and `git stash list` to verify that it's no longer there. The last two steps could have been done in one command with `git stash pop [stash]`, applying and then deleting.
+
+> **Cleanup**<br>
+> Use `git switch master` and `git merge second` to merge that branch back into the master branch, then `git branch -d second` to remove it.
