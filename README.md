@@ -38,7 +38,7 @@ Refer to the previous step on resetting commit history to use `git reset <number
 ---
 
 ## Stashing
-> Note: anytime `[stash]` is written in brackets, it means that that argument is optional, and if not included, will default to the most recent stash. If you only have one stash, that's what it'll default to.
+> Note: anytime `[stash]` is written in brackets, it means that that argument is optional, and if not included, will default to the most recent stash. If you only have one stash, that's what it'll default to. Angle brackets (`<>`) imply a non-optional argument.
 ### Saving changes to be used later
 Update _scratch.txt_ with any new content. To save these changes for later without committing them, stash all uncommitted changes and give the stash a good description by using `git stash save <description>`. Use `git stash list` to make sure the stash was saved, and verify that _scratch.txt_ has been restored in your working tree.
 
