@@ -74,3 +74,9 @@ Make a change on GitHub to _scratch.txt_, and on your local repository, run `git
 
 ### Remembering what you've done
 If you've made changes but you have yet to commit them, but you don't quite remember what you changed, you can use `git diff` to see what you've updated.
+
+### The various flavors of `git log`
+There are many different ways `git log` can be used—throughout this presentation, we've mostly used `git log` and `git log --oneline`, but you can specify a lot of different options. For example, `git log --pretty=format:"(%h) %an - %ar: \"%s\""` to specify _exactly_ what the format should look like, or `git log -p` to show the diff of each commit, `git log --graph` to show a branch graph, and `--oneline` can be used with the last of those two to make it more readable. The ways you can format `git log` are very powerful!
+
+## The end
+Use `git merge third` and `git branch -d third` to get right back to where you started with regard to branches. Congratulations!
