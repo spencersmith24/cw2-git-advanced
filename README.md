@@ -65,3 +65,6 @@ Commit your currently un-committed changes on the `third` branch. Switch back to
 
 ### Seeing who did what to a file
 Use `git blame -L66,67 README.md` to see who wrote these lines you're reading right now and what the commit message was when they wrote it. The answer won't surprise you!
+
+### Viewing changes of individual commits
+Using the commit hash of that commit, use `git show [hash]` to show what was changed in that commit. In this instance, the hash should be `a5c4c9a`, so `git show a5c4c9a`.
