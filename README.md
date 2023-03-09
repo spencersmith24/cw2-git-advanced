@@ -68,3 +68,9 @@ Use `git blame -L66,67 README.md` to see who wrote these lines you're reading ri
 
 ### Viewing changes of individual commits
 Using the commit hash of that commit, use `git show [hash]` to show what was changed in that commit. In this instance, the hash should be `a5c4c9a`, so `git show a5c4c9a`.
+
+### Viewing upstream changes without pulling
+Make a change on GitHub to _scratch.txt_, and on your local repository, run `git fetch` to see that change. To see the exact changes made before you use `git merge` to update your working tree, you can use `git diff origin/master`. End by using `git merge` to update your working tree with those changes.
+
+### Remembering what you've done
+If you've made changes but you have yet to commit them, but you don't quite remember what you changed, you can use `git diff` to see what you've updated.
