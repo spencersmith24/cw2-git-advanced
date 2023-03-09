@@ -56,3 +56,9 @@ Say we no longer need a stash—use `git stash drop [stash]` to delete it, and `
 
 ### Creating a new branch from stashed changes
 Make some changes and stash them. To make a new branch from these changes, use `git stash branch <branch-name> [stash]`. Call our new branch `third`—`git stash branch third` in preparation for the miscellaneous Git commands. You will automatically be switched to this branch with your changes un-committed but on your working tree.
+
+---
+
+## Miscellaneous
+### Cherry-picking
+Commit your currently un-committed changes on the `third` branch. Switch back to the master branch. Say we want to grab one specific commit from the `third` branch to pull onto our current branch, but we don't want any other commits that may be on that branch—just that one. Use `git log third --oneline` to find out the short hash for the commit you want to cherry-pick, then use `git cherry-pick <commit-hash>` to pull it onto your current branch. Your working tree should be updated and your `git log` should show that it's now included on the master branch, too!
