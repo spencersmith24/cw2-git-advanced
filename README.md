@@ -4,6 +4,8 @@ Welcome to the sequel tutorial to Git Basics! This is a companion to the PowerPo
 
 ---
 
+# Section 1
+
 ## Branching
 ### Creating branches
 Create a new branch using `git checkout`—for this example, we'll call our new branch “first”: `git checkout -b first`<br>
@@ -36,6 +38,8 @@ Make some changes without committing them. Say we don't want to keep these chang
 Refer to the previous step on resetting commit history to use `git reset <number-of-commits>` to remove local commits, then `git reset --hard` to set all your files back to those commits, and then you can pull to update your working tree back to normal.
 
 ---
+
+# Section 2
 
 ## Stashing
 > Note: anytime `[stash]` is written in brackets, it means that that argument is optional, and if not included, will default to the most recent stash. If you only have one stash, that's what it'll default to. Angle brackets (`<>`) imply a non-optional argument.
