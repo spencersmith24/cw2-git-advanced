@@ -68,7 +68,7 @@ Make some changes and stash them. To make a new branch from these changes, use `
 Commit your currently un-committed changes on the `third` branch. Switch back to the master branch. Say we want to grab one specific commit from the `third` branch to pull onto our current branch, but we don't want any other commits that may be on that branch—just that one. Use `git log third --oneline` to find out the short hash for the commit you want to cherry-pick, then use `git cherry-pick <commit-hash>` to pull it onto your current branch. Your working tree should be updated and your `git log` should show that it's now included on the master branch, too!
 
 ### Seeing who did what to a file
-Use `git blame -L70,71 README.md` to see who wrote these lines you're reading right now and what the commit message was when they wrote it. The answer won't surprise you!
+Use `git blame -L70,71 README.md` to see who wrote these lines you're reading right now and when they did. The answer won't surprise you!
 
 ### Viewing changes of individual commits
 Using the commit hash of that commit, use `git show [hash]` to show what was changed in that commit. In this instance, the hash should be `a5c4c9a`, so `git show a5c4c9a`.
