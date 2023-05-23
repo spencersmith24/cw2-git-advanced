@@ -35,7 +35,7 @@ Make 3 different commits to the file _scratch.txt_ so that its contents are upda
 ### Getting rid of local changes
 Make some changes without committing them. Say we don't want to keep these changes—either they don't work, or someone has just pushed to remote and we just want to take that change. Use `git restore scratch.txt` (just like the last step) or `git reset --hard` to delete those changes—not providing a commit to reset to (in our last example, HEAD~2, or two commits behind the HEAD commit [three commits ago]) just means reset to the latest commit, which won't do anything unless you provide `--hard`, which tells Git to also update the working tree.<br>
 > **What about if I've already committed**?<br>
-Refer to the previous step on resetting commit history to use `git reset <number-of-commits>` to remove local commits, then `git reset --hard` to set all your files back to those commits, and then you can pull to update your working tree back to normal.
+Refer to the previous step on resetting commit history to use `git reset <number-of-commits> --hard` to remove local commits and update the working tree, and then you can pull to update your working tree back to normal.
 
 ---
 
