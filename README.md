@@ -44,7 +44,7 @@ Refer to the previous step on resetting commit history to use `git reset <number
 ## Stashing
 > Note: anytime `[stash]` is written in brackets, it means that that argument is optional, and if not included, will default to the most recent stash. If you only have one stash, that's what it'll default to. Angle brackets (`<>`) imply a non-optional argument.
 ### Saving changes to be used later
-Update _scratch.txt_ with any new content. To save these changes for later without committing them, stash all uncommitted changes and give the stash a good description by using `git stash save <description>`. Use `git stash list` to make sure the stash was saved, and verify that _scratch.txt_ has been restored in your working tree.
+Update _scratch.txt_ with any new content. To save these changes for later without committing them, stash all uncommitted changes and give the stash a good description by using `git stash save <description>` (or just `git stash` to stash the changes without a description—but including the `save` command requires a description). Use `git stash list` to make sure the stash was saved, and verify that _scratch.txt_ has been restored in your working tree.
 
 ### Viewing the changes made in stashes
 Use `git stash show [stash]` to show your most recently-stashed changes. This isn't super helpful, except telling you how many lines were added to what files—to see a more in-depth diff, use `git stash show -p [stash]`. You should see whatever changes you made in the stash that you made.
